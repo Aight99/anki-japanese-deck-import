@@ -1,0 +1,30 @@
+{
+  "suggested_model_name": "Imported Japanese Vocabulary",
+  "fields": [
+    "Source ID",
+    "Word",
+    "Word Reading",
+    "Word Meaning",
+    "Word Furigana",
+    "Word Audio",
+    "Sentence",
+    "Sentence Furigana",
+    "Sentence Meaning",
+    "Sentence Audio",
+    "Picture",
+    "Notes",
+    "Source URL",
+    "Frequency",
+    "Part of Speech"
+  ],
+  "css": ".card {\n font-family: \"ヒラギノ角ゴ Pro W3\", \"Hiragino Kaku Gothic Pro\", \"Noto Sans JP\", \"Noto Sans CJK JP\", Osaka, \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\", \"MS PGothic\", \"MS UI Gothic\", sans-serif;\n font-size: 44px;\n text-align: center;\n}\n\nimg {\nmax-width: 300px;\nmax-height: 250px;\n}\n\n.mobile img {\nmax-width: 50vw;\n}\n\n/* Prevents the furigana from being selected */\nruby > rt {\n\tuser-select: none;\n}\n\n/* This part defines the bold color. */\nb{color: #5586cd}\nruby {ruby-position:over;} ruby > rt {font-size:0.45em;line-height:1.2;} .meaning,.sentence,.picture {margin-top:12px;} .meaning,.sentence-meaning {font-size:25px;padding-bottom:20px;} .notes {font-size:20px;margin-top:12px;}\n",
+  "templates": [
+    {
+      "Name": "Recognition",
+      "Front": "<div lang=\"ja\">{{Word}}{{#Sentence}}<div style=\"font-size:20px;\">{{Sentence}}</div>{{/Sentence}}</div>",
+      "Back": "<div lang=\"ja\">{{Word Furigana}}<div class=\"meaning\">{{Word Meaning}}</div>{{#Sentence Furigana}}<div class=\"sentence\">{{Sentence Furigana}}</div>{{/Sentence Furigana}}{{#Sentence Meaning}}<div class=\"sentence-meaning\">{{Sentence Meaning}}</div>{{/Sentence Meaning}}{{Word Audio}}{{Sentence Audio}}{{#Picture}}<div class=\"picture\">{{Picture}}</div>{{/Picture}}{{#Notes}}<div class=\"notes\">{{Notes}}</div>{{/Notes}}</div>"
+    }
+  ],
+  "furigana_encoding": "sanitized_html_ruby",
+  "provenance": "Presentation adapted from the locally inspected Kaishi 1.5k template; Kaishi project: https://github.com/donkuri/Kaishi"
+}

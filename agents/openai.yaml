@@ -1,0 +1,4 @@
+interface:
+  display_name: "Импорт японской колоды в Anki"
+  short_description: "Импорт слов с фуриганой и аудио в стиле Kaishi"
+  default_prompt: "Используй $anki-japanese-deck-import, чтобы добавить эту японскую колоду в Anki в стиле Kaishi и спросить, из каких существующих колод исключить знакомые слова."
