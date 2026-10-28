@@ -26,4 +26,4 @@ https://jpdb.io/anime/3904/re-zero-kara-hajimeru-isekai-seikatsu
 
 The skill lists your decks and asks which ones to use for exclusions before importing. Studied words are excluded by default; you can choose all words from those decks instead.
 
-Card presentation follows your installed [Kaishi](https://github.com/donkuri/Kaishi) deck.
+Includes a [Kaishi-style card template](assets/kaishi-vocabulary.json); Kaishi does not need to be installed.

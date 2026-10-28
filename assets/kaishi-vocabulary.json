@@ -26,5 +26,5 @@
     }
   ],
   "furigana_encoding": "sanitized_html_ruby",
-  "provenance": "Presentation adapted from the locally inspected Kaishi 1.5k template; Kaishi project: https://github.com/donkuri/Kaishi"
+  "provenance": "Bundled presentation based on Kaishi 1.5k; no local Kaishi installation required. Kaishi project: https://github.com/donkuri/Kaishi"
 }

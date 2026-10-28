@@ -17,7 +17,7 @@ Anki documents `prop:reps` and deck/subdeck searching at [Searching](https://doc
 Use the installed API's actual signatures; inspect its source or current documentation when uncertain. Applicable actions include:
 
 - `deckNames`, `findNotes`, `notesInfo`, `findCards`, `cardsInfo` for discovery and verification.
-- `modelFieldNames`, `modelTemplates`, `modelStyling` to inspect the user's Kaishi.
+- `modelFieldNames`, `modelTemplates`, `modelStyling` to inspect an existing destination type before updating it. Load new destination presentation from the bundled asset, not a local Kaishi deck.
 - `createDeck`, `createModel` for a dedicated destination type; check whether the names already exist.
 - `canAddNotes`, `addNotes`, `updateNoteFields`, `storeMediaFile`, `exportPackage` for the requested import.
 
@@ -33,9 +33,9 @@ Only touch notes identified by the destination's source IDs/tags and confirmed m
 
 ## Furigana and display
 
-`assets/kaishi-vocabulary.json` is a compact fallback using the observed Kaishi fonts, 44px centered word text, 25px meaning, image limits and audio placement. Prefer the actual installed reference when it differs. Copy presentation into a dedicated type; preserve required fields or wrap unavailable sentence/picture fields conditionally.
+`assets/kaishi-vocabulary.json` is the standard template for every import. It bundles Kaishi-style fonts, 44px centered word text, 25px meaning, image limits and audio placement. Use its fields, CSS and templates to create a dedicated destination type. No installed Kaishi deck or note type is required, and local Kaishi customizations must not change the output. Preserve the bundled conditional handling of optional sentence/picture fields.
 
-The fallback expects **raw, sanitized HTML ruby** in `Word Furigana`, unlike the bracket notation processed by Anki's `furigana:` filter. Only allow ruby/rt/rp and escaped text. Check that removing rt/rp yields the original word. The front must not expose furigana or a full reading. The back renders the annotated word once. Save original reading separately but do not display it as a standalone line.
+The bundled template expects **raw, sanitized HTML ruby** in `Word Furigana`, unlike the bracket notation processed by Anki's `furigana:` filter. Only allow ruby/rt/rp and escaped text. Check that removing rt/rp yields the original word. The front must not expose furigana or a full reading. The back renders the annotated word once. Save original reading separately but do not display it as a standalone line.
 
 ## Native audio helper
 
